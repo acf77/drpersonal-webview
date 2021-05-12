@@ -1,0 +1,12 @@
+{
+  "name": "drpersonal-webview",
+  "displayName": "drpersonal-webview",
+  "expo": {
+    "name": "drpersonal-webview",
+    "slug": "drpersonal-webview",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
