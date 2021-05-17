@@ -1,21 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet } from "react-native";
 
-export default function App() {
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+
+import HomeScreen from "./src/pages/homeScreen";
+import Clientes from "./src/pages/clientes";
+import Welcome from "./src/pages/welcome";
+import Exercicio from "./src/pages/exercicios";
+import Treinos from "./src/pages/treinos";
+import resetSenha from "./src/pages/resetSenha";
+
+const Stack = createStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Início" component={Welcome} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Meus Clientes" component={Clientes} />
+        <Stack.Screen name="Meus Exercicios" component={Exercicio} />
+        <Stack.Screen name="Treinos" component={Treinos} />
+        <Stack.Screen name="Mudar Senha" component={resetSenha} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#ED6C37",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  webview: {
+    marginTop: 40,
   },
 });
+
+export default App;
