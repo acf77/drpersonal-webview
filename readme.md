@@ -12,7 +12,8 @@ Prescreva exercícios e acompanhe os seus alunos de onde estiver.
   - Controle a intensidade e a carga dos exercícios;
   - Progressão e Periodização do treinamento para resultados à longo prazo.
 
-<h2> Tecnologias e pacotes usados </h2>
+<h3> Tecnologias e pacotes usados </h3>
+
   - WebView (http://app.drpersonal.com.br);
   - Stack Navigator com Header;
-  - StyleSheet;
+  - StyleSheet.
